@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>동남보건대학교</title>
+<script type="text/javascript" src="js/jquery-2.2.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
+<script type="text/javascript" src="js/slick/slick.min.js"></script>
+<link rel="stylesheet" type="text/css" href="js/slick/slick.css" />
+
+<script type="text/javascript" src="js/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<link rel="stylesheet" type="text/css" href="js/mCustomScrollbar/jquery.mCustomScrollbar.css" />
+
+<script type="text/javascript" src="js/counter/waypoints.min.js"></script>
+<script type="text/javascript" src="js/counter/jquery.counterup.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/kor_a.css" />
+
+<script>
+$(function(){
+    
+    $(".mPride .wrap .right").mCustomScrollbar();
+    $(".mPride .wrap").mouseover(function(){
+        if(cont_loc < 870 || conts_loc == null){
+            $("body").addClass('typePride');
+            $(".mPride").stop().animate({
+                "right": "0"
+            }, 400, 'swing').css({
+                "height": window.innerHeight
+            });
+            $(".mPride .wrap").css({
+                "height": window.innerHeight - 180
+            });
+            mPride_motion();
+        }
+    });
+    $(".mPride .wrap").mouseleave(function(){
+        if(cont_loc < 870){
+            $("body").removeClass('typePride');
+            $(".mPride").stop().animate({
+                "right": "-1635px"
+            }, 400, 'swing').css({
+                "height": "937px"
+            });
+        }else{
+            $(".mPride").stop().animate({
+                "right": "-1920px"
+            }, 400, 'swing').css({
+                "height": "937px"
+            });
+            $(".btn_stickyPride").removeAttr('style');
+        }
+        $(".mPride .wrap").css("height","");
+    });
+    function mPride_motion(){
+        $("#header .mPride .list li:nth-child(1)").delay(550).animate({
+            "padding-top": "0"
+        }, 400);
+        $("#header .mPride .list li:nth-child(2)").delay(750).animate({
+            "padding-top": "0"
+        }, 400);
+        $("#header .mPride .list li:nth-child(3)").delay(950).animate({
+            "padding-top": "0"
+        }, 400);
+        $("#header .mPride .list li:nth-child(4)").delay(1150).animate({
+            "padding-top": "0"
+        }, 400);
+        $("#header .mPride .list li:nth-child(5)").delay(1350).animate({
+            "padding-top": "0"
+        }, 400);
+        $("#header .mPride .list li:nth-child(6)").delay(1550).animate({
+            "padding-top": "0"
+        }, 400);
+        $("#header .mPride .list li:nth-child(7)").delay(1750).animate({
+            "padding-top": "0"
+        }, 400);
+    }
+    $(".btn_stickyPride").click(function(){
+        $(".mPride").stop().animate({
+            "right": "0px"
+        }, 500, 'swing').css({
+            "height": window.innerHeight
+        });
+        $(".mPride .wrap").css({
+            "height": window.innerHeight - 180
+        });
+
+        mPride_motion();
+
+        $(this).css({
+            "right": "-160px"
+        });
+    });
+
+    $(".mVisual .list").slick({
+        infinite: true,
+        dots: true,
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        fade:true
+    });
+    function mVisual(){
+        $(".mVisual .slick-dots").css({
+            "margin-top": -($(".mVisual .slick-dots").height() / 2)
+        });
+    }
+    function mVisual_motion(){
+        $(".mVisual .unit .tit>img").delay(350).animate({
+            "margin-top": "0"
+        },600,"easeOutCubic");
+        $(".mVisual .unit .txt>img").delay(1000).animate({
+            "margin-top": "0"
+        },600,"easeOutCubic");
+        $(".mVisual .unit .tit_s>img").delay(1350).animate({
+            "margin-left": "0"
+        },600,"easeOutCubic");
+        $(".mVisual .unit .tit_s>.bar").delay(1500).animate({
+            "left": "0"
+        },600,"easeOutCubic");
+        $(".mVisual .unit .pattern").delay(2100).animate({
+            "opacity": "1"
+        },1000);
+    }
+    mVisual_motion();
+    $('.mVisual .list').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        $(".mVisual .unit .tit>img").removeAttr('style');
+        $(".mVisual .unit .txt>img").removeAttr('style');
+        $(".mVisual .unit .tit_s>img").removeAttr('style');
+        $(".mVisual .unit .tit_s>.bar").removeAttr('style');
+        $(".mVisual .unit .pattern").removeAttr('style');
+        mVisual_motion();
+    });
+
+    $(".mVisual .slick-dots button").each(function(){
+        var numTxt = $(this).text();
+        $(this).text("0" + numTxt);
+    });
+
+    $(".mNotice .list").slick({
+        infinite: true,
+        dots: true,
+        arrows: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 4500,
+        variableWidth: true
+    });
+    $(".mNotice .slick-dots li").css({
+        "width": 100 / $(".mNotice .slick-dots li").length + "%"
+    });
+
+    function mNotice_motion(){
+        $(".mNotice .unit").animate({
+            "padding-top": "0",
+            "opacity": "1"
+        },800, "easeOutCubic");
+    }
+
+    function mNews_motion(){
+        $(".mNews .unit:nth-child(1)").animate({
+            "padding-top": "0",
+            "opacity": "1"
+        },600, null, mNews_motionReset);
+        $(".mNews .unit:nth-child(2)").delay(100).animate({
+            "padding-top": "0",
+            "opacity": "1"
+        },600, null, mNews_motionReset);
+        $(".mNews .unit:nth-child(3)").delay(200).animate({
+            "padding-top": "0",
+            "opacity": "1"
+        },600, null, mNews_motionReset);
+        $(".mNews .unit:nth-child(4)").delay(300).animate({
+            "padding-top": "0",
+            "opacity": "1"
+        },600, null, mNews_motionReset);
+    }
+    function mNews_motionReset(){
+        $(".mNews .unit").addClass('on');
+    }
+
+    function mDeptIntro_motion(){
+        $(".mDeptIntro li:nth-child(1)").animate({
+            "padding-top": "0",
+            "opacity": "1"
+        },500,  "easeOutCubic");
+        $(".mDeptIntro li:nth-child(2)").delay(200).animate({
+            "padding-top": "0",
+            "opacity": "1"
+        },500,  "easeOutCubic");
+        $(".mDeptIntro li:nth-child(1) img").delay(400).animate({
+            "opacity": "1"
+        },300);
+        $(".mDeptIntro li:nth-child(2) img").delay(500).animate({
+            "opacity": "1"
+        },300);
+    }
+
+    $(".mChannel .list").slick({
+        infinite: true,
+        dots: false,
+        arrows: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 4250,
+        variableWidth: true
+    });
+    function mChannel_motion(){
+        $(".mChannel .mTit").animate({
+            "padding-top": "0",
+            "opacity": "1"
+        },800, "easeOutCubic");
+        $(".mChannel .bg").delay(500).animate({
+            "left": "0",
+            "opacity": "1"
+        },1000,  "easeOutCubic");
+        $(".mChannel .list").delay(600).animate({
+            "left": "0",
+            "opacity": "1"
+        },1000);
+        $(".mChannel .pattern").delay(2000).animate({
+            "opacity": "1"
+        },600);
+    }
+
+    function mNetwork(){
+        $(".counter").counterUp({
+            delay: 10,
+            time: 1200
+        });
+    }
+    mNetwork();
+    function mNetwork_motion(){
+        $(".mNetwork .list li").animate({
+            "opacity": "1"
+        }, 1500);
+    }
+
+    $(window).bind('load resize', function(){
+        mVisual()
+    });
+
+    var cont_loc = null;
+    $(window).scroll(function(){
+        cont_loc = $(window).scrollTop();
+        console.log(cont_loc);
+        if(cont_loc > 45){
+            $("body").addClass('typeSticky');
+        }else{
+            $("body").removeClass('typeSticky');
+        }
+
+        if(cont_loc > 400){
+            mNotice_motion();
+        }
+
+        if(cont_loc > 800){
+            mNews_motion();
+        }
+
+        if(cont_loc > 850){
+            $("body").addClass('prideChange');
+        }else{
+            $("body").removeClass('prideChange');
+        }
+
+        if(cont_loc < 870){
+            $(".mPride").css({
+                "right": "-1635px"
+            });
+        }else{
+            $(".mPride").css({
+                "right": "-1920px"
+            });
+        }
+
+        if(cont_loc > 1400){
+            mDeptIntro_motion();
+        }
+
+        if(cont_loc > 2200){
+            mChannel_motion();
+        }
+
+        if(cont_loc > 2700){
+            mNetwork_motion();
+        }
+    });
+
+    $("html, body").on('mousewheel DOMMouseScroll', function(e){
+        var E = e.originalEvent;
+        delta = 0;
+        if(E.detail){
+            delta = e.Detail * -40;
+        }else{
+            delta = E.wheelDelta;
+        }
+
+        if(cont_loc > 500){
+            if(delta == -120){
+                //마우스 휠을 아래로 내렸을 경우
+                $(".mNotice .pattern").clearQueue().animate({
+                    "top": "-40px"
+                }, 1000, 'easeOutQuad')
+                $(".mNews .pattern").clearQueue().animate({
+                    "top": "247px"
+                }, 1000, 'easeOutQuad')
+            }
+            if(delta == 120){
+                //마우스 휠을 위로 올렸을 경우
+                $(".mNotice .pattern").clearQueue().animate({
+                    "top": "80px"
+                }, 1000, 'easeOutQuad')
+                $(".mNews .pattern").clearQueue().animate({
+                    "top": "+190px"
+                }, 1000, 'easeOutQuad')
+            }
+        }else{
+            $(".mNotice .pattern").removeAttr('style');
+            $(".mNews .pattern").removeAttr('style');
+        }
+        
+
+        if(cont_loc > 1460){
+            if(delta == -120){
+                //마우스 휠을 아래로 내렸을 경우
+                $(".mChannel .pattern").clearQueue().animate({
+                    "top": "-=30px"
+                }, 1000, 'easeOutQuad')
+            }
+            if(delta == 120){
+                //마우스 휠을 위로 올렸을 경우
+                $(".mChannel .pattern").clearQueue().animate({
+                    "top": "+=30px"
+                }, 1000, 'easeOutQuad')
+            }
+        }else{
+            $(".mNotice .pattern").removeAttr('style');
+        }
+    });
+});
+</script>
+</head>
+<body>
+
+<div class="sduWrap">
+    <div id="header">
+        <header>
+            <h1>
+                <a href="kor_a_sub.html">
+                    <img src="img/kor_a/logo.png" />
+                    <span class="sticky_unit"><img src="img/kor_a/sticky/logo.png" /></span>
+                </a>
+            </h1>
+            <div class="gnb">
+                <img src="img/kor_a/gnb.png" class="gnb_menu" />
+                <img src="img/kor_a/btn_fullmenu.png" class="btn_login" />
+                <span class="sticky_unit">
+                    <img src="img/kor_a/sticky/gnb.png" class="gnb_menu" />
+                    <img src="img/kor_a/sticky/btn_login.png" class="btn_login" />
+                </span>
+            </div>
+            <div class="util">
+                <img src="img/kor_a/top_util.png" class="top_util" />
+            </div>
+        </header>
+
+        <button type="button" class="btn_stickyPride"><img src="img/kor_a/sticky/btn_prideSdu.png" /></button>
+        <div class="mPride" style="right:-1635px;">
+            <div class="wrap">
+                <div class="contArea">
+                    <div class="left">
+                        <img src="img/kor_a/left_cont.png" alt="">
+                    </div>
+                    <!-- <ul class="list">
+                        <li>
+                            <div>
+                                <img class="img" src="img/kor_a/mPride01_img.png" />
+                                <img class="txt" src="img/kor_a/mPride01_txt.png" />
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img class="img" src="img/kor_a/mPride02_img.png" />
+                                <img class="txt" src="img/kor_a/mPride02_txt.png" />
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img class="img" src="img/kor_a/mPride03_img.png" />
+                                <img class="txt" src="img/kor_a/mPride03_txt.png" />
+                            </div>
+                        </li>
+                        <li>
+                            <div class="mTit">
+                                <h2><img src="img/kor_a/mTit_pride.png" /></h2>
+                                <img src="img/kor_a/mPride_txt.png" />
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img class="img" src="img/kor_a/mPride04_img.png" />
+                                <img class="txt" src="img/kor_a/mPride04_txt.png" />
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img class="img" src="img/kor_a/mPride05_img.png" />
+                                <img class="txt" src="img/kor_a/mPride05_txt.png" />
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img class="img" src="img/kor_a/mPride06_img.png" />
+                                <img class="txt" src="img/kor_a/mPride06_txt.png" />
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img class="img" src="img/kor_a/mPride07_img.png" />
+                                <img class="txt" src="img/kor_a/mPride07_txt.png" />
+                            </div>
+                        </li>
+                    </ul> -->
+                    <div class="right">
+                        <img src="img/kor_a/rightCont.png" alt="">
+                    </div>
+                </div>
+                <span class="mouse"></span>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="container">
+        <div id="contents">
+
+            <div class="mVideo">
+            </div>
+
+            <!-- mVisual -->
+            <div class="mVisual">
+                <div class="list">
+                    <div class="unit">
+                        <img class="bg" src="img/kor_a/visual1.jpg" alt="">
+                        <div class="txtArea">
+                            <div class="tit_s">
+                                <img src="img/kor_a/mVisual01_tit_s.png" />
+                                <span class="bar"></span>
+                            </div>
+                            <div class="tit"><img src="img/kor_a/mVisual01_tit.png" /></div>
+                            <div class="txt"><img src="img/kor_a/mVisual01_txt.png" /></div>
+                            <div class="pattern"><img src="img/kor_a/mVisual01_pattern.png" /></div>
+                        </div>
+                    </div>
+                    <div class="unit">
+                        <img class="bg" src="img/kor_a/visual2.jpg" alt="">
+                        <div class="txtArea">
+                            <div class="tit_s">
+                                <img src="img/kor_a/mVisual02_tit_s.png" />
+                                <span class="bar"></span>
+                            </div>
+                            <div class="tit"><img src="img/kor_a/mVisual02_tit.png" /></div>
+                            <div class="txt"><img src="img/kor_a/mVisual02_txt.png" /></div>
+                            <div class="pattern pattern2"><img src="img/kor_a/mVisual02_pattern.png"/></div>
+                        </div>
+                    </div>
+                    <div class="unit">
+                        <img class="bg" src="img/kor_a/visual1.jpg" alt="">
+                        <div class="txtArea">
+                            <div class="tit_s">
+                                <img src="img/kor_a/mVisual01_tit_s.png" />
+                                <span class="bar"></span>
+                            </div>
+                            <div class="tit"><img src="img/kor_a/mVisual01_tit.png" /></div>
+                            <div class="txt"><img src="img/kor_a/mVisual01_txt.png" /></div>
+                            <div class="pattern"><img src="img/kor_a/mVisual01_pattern.png" /></div>
+                        </div>
+                    </div>
+                    <div class="unit">
+                        <img class="bg" src="img/kor_a/visual2.jpg" alt="">
+                        <div class="txtArea">
+                            <div class="tit_s">
+                                <img src="img/kor_a/mVisual02_tit_s.png" />
+                                <span class="bar"></span>
+                            </div>
+                            <div class="tit"><img src="img/kor_a/mVisual02_tit.png" /></div>
+                            <div class="txt"><img src="img/kor_a/mVisual02_txt.png" /></div>
+                            <div class="pattern pattern2"><img src="img/kor_a/mVisual02_pattern.png"/></div>
+                        </div>
+                    </div>
+                    <div class="unit">
+                        <img class="bg" src="img/kor_a/visual1.jpg" alt="">
+                        <div class="txtArea">
+                            <div class="tit_s">
+                                <img src="img/kor_a/mVisual01_tit_s.png" />
+                                <span class="bar"></span>
+                            </div>
+                            <div class="tit"><img src="img/kor_a/mVisual01_tit.png" /></div>
+                            <div class="txt"><img src="img/kor_a/mVisual01_txt.png" /></div>
+                            <div class="pattern"><img src="img/kor_a/mVisual01_pattern.png" /></div>
+                        </div>
+                    </div>
+                    <div class="unit">
+                        <img class="bg" src="img/kor_a/visual2.jpg" alt="">
+                        <div class="txtArea">
+                            <div class="tit_s">
+                                <img src="img/kor_a/mVisual02_tit_s.png" />
+                                <span class="bar"></span>
+                            </div>
+                            <div class="tit"><img src="img/kor_a/mVisual02_tit.png" /></div>
+                            <div class="txt"><img src="img/kor_a/mVisual02_txt.png" /></div>
+                            <div class="pattern pattern2"><img src="img/kor_a/mVisual02_pattern.png"/></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //mVisual -->
+
+            <!-- mNotice -->
+            <div class="mNotice">
+                <h2><img src="img/kor_a/mTit_notice.png" /></h2>
+                <div class="list">
+                    <div class="unit"><img src="img/kor_a/mNotice01.png" /></div>
+                    <div class="unit"><img src="img/kor_a/mNotice02.png" /></div>
+                    <div class="unit"><img src="img/kor_a/mNotice03.png" /></div>
+                </div>
+                <img class="btn_more" src="img/kor_a/btn_noticeMore.png" />
+                <div class="pattern"><img src="img/kor_a/ct_pattern_b.png" /></div>
+            </div>
+            <!-- //mNotice -->
+
+            <!-- mNews -->
+            <div class="mNews">
+                <div class="inner">
+                    <h2><img src="img/kor_a/mTit_news.png" /></h2>
+                    <div class="list">
+                        <div class="unit">
+                            <div class="img"><img src="img/kor_a/mNews01_img.png" /></div>
+                            <div class="txt"><img src="img/kor_a/mNews01_txt.png" /></div>
+                        </div>
+                        <div class="unit">
+                            <div class="img"><img src="img/kor_a/mNews02_img.png" /></div>
+                            <div class="txt"><img src="img/kor_a/mNews02_txt.png" /></div>
+                        </div>
+                        <div class="unit">
+                            <div class="img"><img src="img/kor_a/mNews03_img.png" /></div>
+                            <div class="txt"><img src="img/kor_a/mNews03_txt.png" /></div>
+                        </div>
+                        <div class="unit">
+                            <div class="img"><img src="img/kor_a/mNews04_img.png" /></div>
+                            <div class="txt"><img src="img/kor_a/mNews04_txt.png" /></div>
+                        </div>
+                    </div>
+
+                    <img class="btn_more" src="img/kor_a/btn_newsMore.png" />
+                </div>
+                <div class="pattern"><img src="img/kor_a/ct_pattern_s.png" /></div>
+            </div>
+            <!-- //mNews -->
+
+            <!-- mDeptIntro -->
+            <div class="mDeptIntro">
+                <ul>
+                    <li><p><span><img src="img/kor_a/mDeptIntro01_txt.png" /></span></p></li>
+                    <li><p><span><img src="img/kor_a/mDeptIntro02_txt.png" /></p></span></li>
+                </ul>
+            </div>
+            <!-- //mDeptIntro -->
+
+            <!-- mIcoBnr -->
+            <div class="mIcoBnr">
+                <ul>
+                    <li><img src="img/kor_a/icoBnr01.png" /></li>
+                    <li><img src="img/kor_a/icoBnr02.png" /></li>
+                    <li><img src="img/kor_a/icoBnr03.png" /></li>
+                    <li><img src="img/kor_a/icoBnr04.png" /></li>
+                    <li><img src="img/kor_a/icoBnr05.png" /></li>
+                    <li><img src="img/kor_a/icoBnr06.png" /></li>
+                    <li><img src="img/kor_a/icoBnr07.png" /></li>
+                </ul>
+            </div>
+            <!-- //mIcoBnr -->
+
+            <!-- mChannel -->
+            <div class="mChannel">
+                <div class="mTit">
+                    <h2><img src="img/kor_a/mTit_channel.png" /></h2>
+                    <img src="img/kor_a/mChannel_txt.png" />
+                    <img src="img/kor_a/mChannel_tag.png" />
+                </div>
+
+                <div class="list">
+                    <div class="unit">
+                        <img src="img/kor_a/mChannel_img01.png" class="img" />
+                        <img src="img/kor_a/sns_blog.png" class="sns" />
+                    </div>
+                    <div class="unit">
+                        <img src="img/kor_a/mChannel_img03.png" class="img" />
+                        <img src="img/kor_a/sns_facebook.png" class="sns" />
+                    </div>
+                    <div class="unit">
+                        <img src="img/kor_a/mChannel_img04.png" class="img" />
+                        <img src="img/kor_a/sns_blog.png" class="sns" />
+                    </div>
+                    <div class="unit">
+                        <img src="img/kor_a/mChannel_img01.png" class="img" />
+                        <img src="img/kor_a/sns_facebook.png" class="sns" />
+                    </div>
+                    <div class="unit">
+                        <img src="img/kor_a/mChannel_img03.png" class="img" />
+                        <img src="img/kor_a/sns_blog.png" class="sns" />
+                    </div>
+                    <div class="unit">
+                        <img src="img/kor_a/mChannel_img04.png" class="img" />
+                        <img src="img/kor_a/sns_facebook.png" class="sns" />
+                    </div>
+                </div>
+
+                <div class="pattern"><img src="img/kor_a/ct_pattern_s2.png" /></div>
+
+                <div class="bg"></div>
+            </div>
+            <!-- //mChannel -->
+
+            <!-- mNetwork -->
+            <div class="mNetwork">
+                <h2><img src="img/kor_a/mTit_network.png" /></h2>
+                <ul class="list">
+                    <li class="counter">1,636</li>
+                    <li class="counter">4,148</li>
+                    <li class="counter">100</li>
+                    <li class="counter">75.6</li>
+                </ul>
+            </div>
+            <!-- //mNetwork -->
+        </div>
+    </div>
+
+    <div id="footer">
+        <img src="img/kor_a/footer_left.png" class="f_imgL" alt="" />
+        <img src="img/kor_a/footer_right.png" class="f_imgR" alt="" />
+    </div>
+</div>
+
+</body>
+</html>

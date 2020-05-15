@@ -1,0 +1,97 @@
+@charset "utf-8";
+@import url(font_Gotham/font.css);
+
+/* Reset */
+html, body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, span, form, fieldset, input, select, label, textarea, table, caption, thead, tfoot, tbody, tr, th, td
+{margin:0;padding:0;font:14px/1.5 'Noto Sans KR', '맑은고딕','Malgun Gothic','나눔고딕','nanumgothic',굴림,Gulim,돋움,Dotum, Arial, Sans-serif;color:#000;-webkit-text-size-adjust:none;}
+b, span, strong, input, a, button, pre {font-size:inherit;font-family:inherit;color:inherit}
+article, aside, dialog, footer, header, section, footer, nav, figure, hgroup, details, summary, figure, figcaption {display: block;}
+cite {display:inline}
+html, body {height:100%;}
+body {margin:0px;overflow-y:scroll;}
+a:link {text-decoration:none;}
+a:visited {text-decoration:none;}
+img {border:0;}
+label, input, textarea, select {vertical-align:middle}
+ol, ul {list-style:none;}
+table {border-collapse:collapse;table-layout:fixed;}
+fieldset {border:none}
+hr {position:absolute;left:-1000%;width:1px;height:1px;font-size:0;line-height:0;overflow:hidden;}
+button {margin:0;padding:0;border:none;background:none;outline:none;cursor:pointer;display:inline-block;overflow:visible}
+figure {margin:0;padding:0}
+
+/* contents */
+.dnhuIpsi_a {position:relative;overflow-x:auto;min-width:1600px;width:100%;margin:0 auto;}
+#header {position:fixed;width:100%;height:92px;z-index:10;background:#fff;}
+#header header {position:relative;width:100%;margin:0 auto;text-align:center;min-width:1700px}
+#header header h1 {position:absolute;left:232px;top:22px;}
+#header header .gnb {overflow:hidden;padding-left:206px;padding-top:34px;border-top:2px solid #00665f}
+#header header .util {position:absolute;right:232px;top:37px;overflow:hidden;}
+.mVisual {padding-top:95px;text-align: center;background:#edf1f4}
+.mVisual .mainSl > span {position:absolute;display:block;width:100%;height:99%;background:#16b289;left:0}
+.mVisual .pattern {position:absolute;left:120px;top:70px;opacity:0;animation:pattern 0.8s ease-out 0.7s forwards;}
+@keyframes pattern {
+    0% {
+        opacity:0;
+        transform:scale(0.5);
+        -webkit-transform:scale(0.5);
+        -ms-transform:scale(1.6);
+    }
+    100% {
+        opacity:1;
+        transform:scale(1);
+        -webkit-transform:scale(1);
+        -ms-transform:scale(1);
+    }
+}
+.mVisual .pattern2 {position:absolute;right:80px;bottom:70px;}
+.mVisual .patternB {position:absolute;right:180px;bottom:120px;}
+.mVisual .patternB > span:first-child {display:block;width:104px;height:52px;background:#2eb282;opacity:0.4;opacity:0;left:-32px}
+.mVisual .patternB > span:last-child {display:block;width:52px;height:104px;background:#2eb282;opacity:0.4;margin-left:52px;margin-top:-52px;opacity:0;top:-32px}
+.mVisual .mainSl {position:relative;;width:1440px;overflow:hidden;margin:40px auto 0 auto ;}
+.mVisual .mainSl .left {float:left;width:1047px;}
+.mVisual .mainSl .left .unit {position:relative;width:1078px;opacity: 1;}
+.mVisual .mainSl .left .slick-dots {position:absolute;margin-left:85px;margin-top:-90px;}
+.mVisual .mainSl .left .slick-dots li {display:inline-block;width:10px;height:10px;border-radius: 50%;background:#fff;opacity: 0.4;font-size:0;vertical-align: top;margin-left:10px;transition:0.5s all;}
+.mVisual .mainSl .left .slick-dots li.slick-active {width:35px;opacity: 1;border-radius: 30px;background:#00c1ff;}
+.mVisual .mainSl .left .txt {position:absolute;left:95px;top:160px;}
+.mVisual .mainSl .left .txt img {display:block;position:relative;opacity:0;left:-80px;}
+.mVisual .mainSl .left .txt img:first-child {margin-bottom:30px}
+.mVisual .mainSl .right {position:relative;float:left;width:360px;height:476px;opacity: 1;z-index:90}
+.mVisual .mainSl .right .unit img {margin: 0 auto;}
+.mVisual .mainSl .right .slick-dots {position:absolute;left:50%;margin-left:-13px;margin-top:-40px;}
+.mVisual .mainSl .right .slick-dots li {display:inline-block;width:8px;height:8px;border-radius: 50%;background:#fff;opacity: 0.4;font-size:0;vertical-align: top;}
+.mVisual .mainSl .right .slick-dots li + li {margin-left:10px;}
+.mVisual .mainSl .right .slick-dots li.slick-active {opacity: 1;}
+.utilBar ul {position:relative;text-align:center;max-width:1180px;margin:35px auto;padding-left:15px;top:0px;opacity:1}
+.utilBar ul li  {padding-right:85px}
+
+.utilBar ul .slick-prev {display:block;position:absolute;top:21px;left:-50px;width:28px;height:28px;font-size:0;background:url(../img/ipsi_a/navi_l.png)}
+.utilBar ul .slick-next {display:block;position:absolute;top:21px;right:0;width:28px;height:28px;font-size:0;background:url(../img/ipsi_a/navi_r.png)}
+
+.service {overflow:hidden;text-align: center;font-size: 0;padding-bottom:20px;}
+.service .left {display:inline-block;vertical-align: top;font-size: 0;margin-right:12px;}
+.service .left img {position:relative;opacity:0;top:80px;}
+.service .serviceCont {display:inline-block;vertical-align: top;font-size: 0;}
+.service .serviceCont:last-child img {display:block;margin-left:10px;}
+.service .serviceCont:last-child img:nth-child(2) {margin-top:10px}
+.service .right {display:inline-block;vertical-align: top;}
+.service .right img {position:relative;opacity:0;top:80px;}
+
+.mDepth {margin-top:50px;text-align: center;margin-bottom:50px;background-image: url(../img/ipsi_a/pattern.png), url(../img/ipsi_a/pattern2.png);background-repeat: no-repeat;background-position: left 60px top  0px, right 0px bottom 0px;}
+.mDepth .mTit {margin-bottom:35px;opacity:0;top:30px;position: relative;}
+.mDepth ul {font-size:0;overflow: hidden;margin: 0 auto;position: relative;top:50px;opacity: 0;}
+.mDepth ul li {display:inline-block;vertical-align: top;}
+
+.mRef{position:relative;text-align: center;font-size: 0;background:#f1f4f6;padding: 45px 0 40px 0}
+.mRef img {vertical-align: top;opacity:0;left:25px;position:relative;}
+.mRef img:nth-child(1) {padding-right:38px;}
+.mRef img:nth-child(2) {padding: 0 38px}
+.mRef img:nth-child(3) {padding: 0 38px;padding-right:0}
+.mRef span {width:1px;height:170px;position:absolute;left:695px;background:#e2e5e8;top:45px}
+.mRef span:last-child {left:1200px}
+
+footer {padding: 30px 230px;overflow:hidden;}
+footer img {vertical-align: top;}
+footer .f_imgL {float:left;}
+footer .f_imgR {float:right;}

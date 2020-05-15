@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>동남보건대학교</title>
+<script type="text/javascript" src="js/jquery-2.2.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
+<script type="text/javascript" src="js/slick/slick.min.js"></script>
+<link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
+
+<script type="text/javascript" src="js/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<link rel="stylesheet" type="text/css" href="js/mCustomScrollbar/jquery.mCustomScrollbar.css"/>
+
+<link rel="stylesheet" type="text/css" href="css/intro.css" />
+</head>
+<script>
+    $(function () {
+        var windowHeight = $(window).innerHeight();
+        $('.dnhuIndex').css('height', windowHeight+'px');
+
+        $(".dnhuIndex #container .iVisual img").animate({
+            "opacity": 1,
+        }, 1200, 'easeOutQuad');
+
+        $('.dnhuIndex #contents .grp_list li:nth-child(2)').hover(function(){
+            $('.dnhuIndex #contents .grp_list li:nth-child(1)').removeClass('on')
+        }, function(){
+            $('.dnhuIndex #contents .grp_list li:nth-child(1)').addClass('on')
+        })
+    })
+</script>
+<body>
+<div class="dnhuIndex">
+    <div id="header">
+        <h1>
+            <a href="intro_mobile.html"><img src="img/index/logo.png" /></a>
+        </h1>
+        <img src="img/index/util.png" alt="" class="util">
+    </div>
+    <div id="container">
+        <div id="contents">
+            <div class="iVisual">
+                <img src="img/index/index_visual.jpg" alt="">
+            </div>
+            <ul class="grp_list">
+                <li class="on">
+                    <a href="kor_a_main.html">
+                        <img src="img/index/site2.png" />
+                        <span><img src="img/index/site2_on.png" /></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="ipsi_a_main.html">
+                        <img src="img/index/site1.png" />
+                        <span><img src="img/index/site1_on.png" /></span>
+                    </a>
+                </li>
+                <li>
+                    <img src="img/index/site3.png" />
+                </li>
+                <li>
+                    <img src="img/index/site4.png" />
+                </li>
+            </ul>
+            <ul class="naviList">
+                <li>
+                    <img src="img/index/navi1.png" alt="">
+                </li>
+                <li>
+                    <img src="img/index/navi2.png" alt="">
+                </li>
+                <li>
+                    <img src="img/index/navi3.png" alt="">
+                </li>
+                <li>
+                    <img src="img/index/navi4.png" alt="">
+                </li>
+                <li>
+                    <img src="img/index/navi5.png" alt="">
+                </li>
+                <li>
+                    <img src="img/index/navi6.png" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="footer">
+        <img src="img/index/copyright.png" alt="" />
+    </div>
+</div>
+
+</body>
+</html>

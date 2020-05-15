@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>동남보건대학교</title>
+<script type="text/javascript" src="js/jquery-2.2.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
+<script type="text/javascript" src="js/slick/slick.min.js"></script>
+<link rel="stylesheet" type="text/css" href="js/slick/slick.css" />
+
+<script type="text/javascript" src="js/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<link rel="stylesheet" type="text/css" href="js/mCustomScrollbar/jquery.mCustomScrollbar.css" />
+
+<script type="text/javascript" src="js/counter/waypoints.min.js"></script>
+<script type="text/javascript" src="js/counter/jquery.counterup.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/ipsi_a.css" />
+</head>
+
+<script>
+    $(function(){
+        $('.utilBar ul').slick({
+            slidesToScroll :1,
+            slidesToShow : 8,
+            arrows: true
+        })
+
+        $('.mVisual .mainSl .right').slick({
+            slidesToScroll :1,
+            dots: true,
+            arrows: false,
+            autoplay:true,
+            autoplaySpeed:5000
+        })
+
+        $('.mVisual .mainSl .left').slick({
+            slidesToScroll :1,
+            dots: true,
+            arrows: false,
+            autoplay:true,
+            autoplaySpeed:5000
+        })
+
+        function box_motion(){
+            $('.mainSl > span').delay(70).animate({
+            "left": '1078px',
+            }, 380, 'easeOutQuad').delay(10).animate({
+            "opacity": '0',
+            }, 1280, 'easeOutQuad');
+
+            $('.mVisual .mainSl .left .unit ').delay(480).animate({
+            "opacity": '1',
+            }, 0, 'easeOutQuad');
+
+            $('.mVisual .mainSl .right').delay(460).animate({
+            "opacity": '1',
+            }, 0, 'easeOutQuad');
+        }
+
+        function mainV_motion(){
+            $('.mVisual .mainSl .left .txt img:nth-child(1)').delay(150).animate({
+            "opacity": '1',
+            'left': '0'
+            }, 950, 'easeOutQuad');
+
+            $('.mVisual .mainSl .left .txt img:nth-child(2)').delay(350).animate({
+            "opacity": '1',
+            'left': '0'
+            }, 950, 'easeOutQuad');
+            $('.mVisual .patternB > span:last-child').delay(1000).animate({
+            "opacity": '0.5',
+            'top':'0'
+            }, 800, 'easeOutQuad');
+            $('.mVisual .patternB > span:first-child').delay(1300).animate({
+            "opacity": '0.5',
+            'left':'0'
+            }, 800, 'easeOutQuad');
+
+            $('.service .left .img1').delay(350).animate({
+            "opacity": '1',
+            'top': '0'
+            },450, 'easeOutQuad');
+            $('.service .left .img2').delay(600).animate({
+            "opacity": '1',
+            'top': '0'
+            }, 450, 'easeOutQuad');
+            $('.service .left .img3').delay(1000).animate({
+            "opacity": '1',
+            'top': '0px'
+            }, 450, 'easeOutQuad');
+            $('.service .right .img4').delay(800).animate({
+            "opacity": '1',
+            'top': '0px'
+            }, 450, 'easeOutQuad');
+        }
+
+        function mDep_motion(){
+            $('.mDepth .mTit').animate({
+            "opacity": '1',
+            'top': '0px'
+            }, 600, 'easeOutQuad');
+            $('.mDepth ul').delay(300).animate({
+            "opacity": '1',
+            'top': '0px'
+            }, 600, 'easeOutQuad');
+        }
+
+        function mRef_motion(){
+            $('.mRef img:nth-child(1)').animate({
+            "opacity": '1',
+            'left': '0px'
+            }, 600, 'easeOutQuad');
+            $('.mRef img:nth-child(2)').delay(300).animate({
+            "opacity": '1',
+            'left': '0px'
+            }, 600, 'easeOutQuad');
+            $('.mRef img:nth-child(3)').delay(600).animate({
+            "opacity": '1',
+            'left': '0px'
+            }, 600, 'easeOutQuad');
+        }
+
+        box_motion();
+        mainV_motion();
+
+        $(window).scroll(function(){
+            cont_loc = $(window).scrollTop();
+            console.log(cont_loc);
+
+            if(cont_loc > 285){
+            mDep_motion()
+            }
+
+            if(cont_loc > 900){
+            mRef_motion()
+            }
+        });
+    })
+</script>
+<body>
+    <div class="dnhuIpsi_a">
+        <div id="header">
+            <header>
+                <h1>
+                    <a href="ipsi_a_sub.html"><img src="img/ipsi_a/logo.png" alt=""></a>
+                </h1>
+                <div class="gnb">
+                    <img src="img/ipsi_a/gnb.png" alt="">
+                    <img src="img/ipsi_a/util.png" alt="" class="util">
+                </div>
+            </header>
+        </div>
+        <div id="container">
+            <div class="content">
+                <div class="mVisual">
+                    <div class="mainSl">
+                        <div class="left">
+                            <div class="unit">
+                                <img src="img/ipsi_a/mVisual.jpg" alt="" class="bg">
+                                <div class="txt">
+                                    <img src="img/ipsi_a/mVisual_txt1.png" alt="">
+                                    <img src="img/ipsi_a/mVisual_txt2.png" alt="">
+                                </div>
+                                <img src="img/ipsi_a/mVisual_pattern1.png" alt="" class="pattern">
+                                <!-- <img src="img/ipsi_a/mVisual_pattern2.png" alt="" class="pattern2"> -->
+                                <div class="patternB">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="unit">
+                                <img src="img/ipsi_a/mVisual2.jpg" alt="" class="bg">
+                                <div class="txt">
+                                    <img src="img/ipsi_a/mVisual_txt1.png" alt="">
+                                    <img src="img/ipsi_a/mVisual_txt2.png" alt="">
+                                </div>
+                                <img src="img/ipsi_a/mVisual_pattern1.png" alt="" class="pattern">
+                                <!-- <img src="img/ipsi_a/mVisual_pattern2.png" alt="" class="pattern2"> -->
+                                <div class="patternB">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="unit">
+                                <img src="img/ipsi_a/mVisual.jpg" alt="" class="bg">
+                                <div class="txt">
+                                    <img src="img/ipsi_a/mVisual_txt1.png" alt="">
+                                    <img src="img/ipsi_a/mVisual_txt2.png" alt="">
+                                </div>
+                                <img src="img/ipsi_a/mVisual_pattern1.png" alt="" class="pattern">
+                                <!-- <img src="img/ipsi_a/mVisual_pattern2.png" alt="" class="pattern2"> -->
+                                <div class="patternB">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="unit">
+                                <img src="img/ipsi_a/mright1.png" alt="">
+                            </div>
+                            <div class="unit">
+                                <img src="img/ipsi_a/mright2.png" alt="">
+                            </div>
+                        </div>
+                        <span></span>
+                    </div>
+                    <div class="utilBar">
+                        <ul>
+                            <li>
+                                <img src="img/ipsi_a/navi1.png" alt="">
+                            </li>
+                            <li>
+                                <img src="img/ipsi_a/navi2.png" alt="">
+                            </li>
+                            <li>
+                                <img src="img/ipsi_a/navi3.png" alt="">
+                            </li>
+                            <li>
+                                <img src="img/ipsi_a/navi4.png" alt="">
+                            </li>
+                            <li>
+                                <img src="img/ipsi_a/navi5.png" alt="">
+                            </li>
+                            <li>
+                                <img src="img/ipsi_a/navi6.png" alt="">
+                            </li>
+                            <li>
+                                <img src="img/ipsi_a/navi7.png" alt="">
+                            </li>
+                            <li>
+                                <img src="img/ipsi_a/navi8.png" alt="">
+                            </li>
+                            <li>
+                                <img src="img/ipsi_a/navi1.png" alt="">
+                            </li>
+                            <li>
+                                <img src="img/ipsi_a/navi2.png" alt="">
+                            </li>
+                            <li>
+                                <img src="img/ipsi_a/navi3.png" alt="">
+                            </li>
+                            <li>
+                                <img src="img/ipsi_a/navi4.png" alt="">
+                            </li>
+                            <li>
+                                <img src="img/ipsi_a/navi5.png" alt="">
+                            </li>
+                            <li>
+                                <img src="img/ipsi_a/navi6.png" alt="">
+                            </li>
+                            <li>
+                                <img src="img/ipsi_a/navi7.png" alt="">
+                            </li>
+                            <li>
+                                <img src="img/ipsi_a/navi8.png" alt="">
+                            </li>
+                        </ul>
+                    </div> 
+
+                    <div class="service">
+                        <div class="left">
+                            <div class="serviceCont">
+                                <img src="img/ipsi_a/service1.png" alt="" class="img1">
+                            </div>
+                            <div class="serviceCont">
+                                <img src="img/ipsi_a/service2.png" alt="" class="img2">
+                                <img src="img/ipsi_a/service3.png" alt="" class="img3">
+                            </div>
+                        </div>
+                        <div class="right">
+                            <img src="img/ipsi_a/notice.png" alt="" class="img4">
+                        </div>
+                    </div>
+                </div>
+                <div class="mDepth">
+                    <div class="mTit">
+                        <img src="img/ipsi_a/mTit_dep.png" alt="">
+                    </div>
+                    <ul>
+                        <li><img src="img/ipsi_a/dep1.png" alt=""></li>
+                        <li><img src="img/ipsi_a/dep2.png" alt=""></li>
+                        <li><img src="img/ipsi_a/dep3.png" alt=""></li>
+                        <li><img src="img/ipsi_a/dep4.png" alt=""></li>
+                    </ul>
+                </div>
+                <div class="mRef">
+                    <img src="img/ipsi_a/reference1.png" alt="">
+                    <img src="img/ipsi_a/reference2.png" alt="">
+                    <img src="img/ipsi_a/reference3.png" alt="">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <img src="img/ipsi_a/footer_l.png" alt="" class="f_imgL">
+            <img src="img/ipsi_a/footer_r.png" alt="" class="f_imgR">
+        </footer>
+    </div>
+</body>
+</html>
