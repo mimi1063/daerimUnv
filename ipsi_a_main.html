@@ -43,6 +43,12 @@
             autoplay:true,
             autoplaySpeed:5000
         })
+        
+        
+        $('.mVisual .mainSl .left').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+            mainV_motionReset();
+            mainV_motion()
+        });
 
         function box_motion(){
             $('.mainSl > span').delay(70).animate({
@@ -70,14 +76,11 @@
             "opacity": '1',
             'left': '0'
             }, 950, 'easeOutQuad');
+
             $('.mVisual .patternB > span:last-child').delay(1000).animate({
-            "opacity": '0.5',
-            'top':'0'
-            }, 800, 'easeOutQuad');
-            $('.mVisual .patternB > span:first-child').delay(1300).animate({
-            "opacity": '0.5',
-            'left':'0'
-            }, 800, 'easeOutQuad');
+            "opacity": '1',
+            'height':'120px'
+            }, 400, 'easeOutQuad');
 
             $('.service .left .img1').delay(350).animate({
             "opacity": '1',
@@ -95,6 +98,11 @@
             "opacity": '1',
             'top': '0px'
             }, 450, 'easeOutQuad');
+        }
+
+        function mainV_motionReset(){
+            $('.mVisual .mainSl .left .txt img').css({'opacity':'0'});
+            $('.mVisual .mainSl .left .txt img').css({'left':'80px'});
         }
 
         function mDep_motion(){
@@ -164,10 +172,8 @@
                                     <img src="img/ipsi_a/mVisual_txt1.png" alt="">
                                     <img src="img/ipsi_a/mVisual_txt2.png" alt="">
                                 </div>
-                                <img src="img/ipsi_a/mVisual_pattern1.png" alt="" class="pattern">
-                                <!-- <img src="img/ipsi_a/mVisual_pattern2.png" alt="" class="pattern2"> -->
+                                <div class="pattern"></div>
                                 <div class="patternB">
-                                    <span></span>
                                     <span></span>
                                 </div>
                             </div>
@@ -177,23 +183,20 @@
                                     <img src="img/ipsi_a/mVisual_txt1.png" alt="">
                                     <img src="img/ipsi_a/mVisual_txt2.png" alt="">
                                 </div>
-                                <img src="img/ipsi_a/mVisual_pattern1.png" alt="" class="pattern">
-                                <!-- <img src="img/ipsi_a/mVisual_pattern2.png" alt="" class="pattern2"> -->
+                                <div class="pattern"></div>
                                 <div class="patternB">
-                                    <span></span>
                                     <span></span>
                                 </div>
                             </div>
                             <div class="unit">
                                 <img src="img/ipsi_a/mVisual.jpg" alt="" class="bg">
                                 <div class="txt">
-                                    <img src="img/ipsi_a/mVisual_txt1.png" alt="">
-                                    <img src="img/ipsi_a/mVisual_txt2.png" alt="">
+                                    <img src="img/ipsi_a/mVisual_txt1_2.png" alt="">
+                                    <img src="img/ipsi_a/mVisual_txt2_2.png" alt="">
                                 </div>
-                                <img src="img/ipsi_a/mVisual_pattern1.png" alt="" class="pattern">
+                                <div class="pattern"></div>
                                 <!-- <img src="img/ipsi_a/mVisual_pattern2.png" alt="" class="pattern2"> -->
                                 <div class="patternB">
-                                    <span></span>
                                     <span></span>
                                 </div>
                             </div>
