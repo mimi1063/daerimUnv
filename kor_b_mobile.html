@@ -2,13 +2,14 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+<!--[if IE 8]>    <html lang="kor" class="ie8"> <![endif]-->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>동남보건대학교</title>
-<script type="text/javascript" src="js/jquery-2.2.1.min.js"></script>
+<title>대림대학교</title>
+<script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
 <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-
 <script type="text/javascript" src="js/slick/slick.min.js"></script>
 <link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
 
@@ -18,10 +19,14 @@
 <link rel="stylesheet" type="text/css" href="css/kor_a.css" />
 
 <script>
-$(function(){
-    $("#mobileBox>section").mCustomScrollbar();
-});
+    $(function () {
+        if ($('html').hasClass('ie8')) {
+        } else {
+            $("#mobileBox>.section").mCustomScrollbar();
+        }
+    });
 </script>
+<style>
 <style>
 #mobileBox>section .logo {width:150px;height:60px;}
 body {overflow-y:hidden}
@@ -30,10 +35,10 @@ body {overflow-y:hidden}
 <body class="type_mobile">
 
     <div id="mobileBox">
-        <section>
+        <div class="section">
             <a href="ipsi_b_main.html" class="logo"></a>
             <img src="img/kor_b/mobile_main.jpg" />
-        </section>
+        </div>
     </div>
 
 </body>
