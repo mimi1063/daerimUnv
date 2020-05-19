@@ -28,7 +28,7 @@ figure {margin:0;padding:0}
 #header .header .gnb {overflow:hidden;padding-left:156px;padding-top:31px;border-top:2px solid #00a6db}
 #header .header .util {position:absolute;right:232px;top:34px;overflow:hidden;}
 .mVisual {padding-top:95px;text-align: center;background:#edf1f4}
-.mVisual .mainSl > span {position:absolute;display:block;width:100%;height:476px;background:#16b289;left:0}
+.mVisual .mainSl > span {position:absolute;display:block;width:100%;height:476px;background:#138add;left:0}
 .mVisual .pattern {position:absolute;width:47px;height:47px;border-radius:50%;left:120px;top:70px;opacity:0;animation:pattern 0.8s ease-out 0.7s forwards;background:#c585ff}
 @keyframes pattern {
     0% {
@@ -52,13 +52,14 @@ figure {margin:0;padding:0}
 .mVisual .mainSl .left .unit {position:relative;width:1078px;opacity: 1;}
 .mVisual .mainSl .left .slick-dots {position:absolute;margin-left:85px;margin-top:-90px;}
 .mVisual .mainSl .left .slick-dots li {display:inline-block;width:10px;height:10px;border-radius: 50%;background:#fff;opacity: 0.4;font-size:0;vertical-align: top;margin-left:10px;transition:0.5s all;}
-.mVisual .mainSl .left .slick-dots li.slick-active {width:35px;opacity: 1;border-radius: 30px;background:#00c1ff;}
+.mVisual .mainSl .left .slick-dots:after {content:'';position:absolute;display:block;margin-left:72px;margin-top:-22px;width:9px;height:12px;background:url(../img/ipsi_a/pause.png) no-repeat;}
 .mVisual .mainSl .left .txt {position:absolute;left:95px;top:160px;}
 .mVisual .mainSl .left .txt img {display:block;position:relative;opacity:0;left:-80px;}
 .mVisual .mainSl .left .txt img:first-child {margin-bottom:30px}
 .mVisual .mainSl .right {position:relative;float:left;width:362px;height:476px;opacity: 1;}
 .mVisual .mainSl .right .unit img {margin: 0 auto;}
 .mVisual .mainSl .right .slick-dots {position:absolute;left:50%;margin-left:-13px;margin-top:-40px;}
+.mVisual .mainSl .right .slick-dots:after {content:'';position:absolute;display:block;margin-left:36px;margin-top:-23px;width:9px;height:12px;background:url(../img/ipsi_a/pause.png) no-repeat;}
 .mVisual .mainSl .right .slick-dots li {display:inline-block;width:8px;height:8px;border-radius: 50%;background:#fff;opacity: 0.4;font-size:0;vertical-align: top;}
 .mVisual .mainSl .right .slick-dots li + li {margin-left:10px;}
 .mVisual .mainSl .right .slick-dots li.slick-active {opacity: 1;}

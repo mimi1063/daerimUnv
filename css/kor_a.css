@@ -187,9 +187,8 @@ body.typeSub {overflow-x:hidden;overflow-y:auto;}
 body.typeSub #header header .util {position:fixed;}
 body.typeSub.typeSticky #header header .util .top_util {top:-9px;}
 .typeSub .quick {position:fixed;right:90px;top:430px;z-index:1000}
-
 #pcBox .logo,
-#mobileBox .logo {display:block;position:absolute;left:0;top:0;width:50%;height:50px;z-index:10;/*background:red;opacity:0.5;*/}
+#mobileBox .logo {display:block;position:absolute;left:0;top:0;width:50%;height:50px;z-index:9999;background:red;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;}
 #pcBox div,
 #mobileBox div {font-size:0;}
 
@@ -197,8 +196,6 @@ body.typeSub.typeSticky #header header .util .top_util {top:-9px;}
 #pcBox {position:relative;width:1920px;margin:0 auto;}
 
 /* 모바일 */
-#mobileBox {position:relative;left:50%;top:50%;overflow:hidden;width:475px;height:838px;transform:translate(-50%, -50%);background:url(../img/bg_phone.png) no-repeat left top;}
-#mobileBox>section {position:relative;overflow-x:hidden;overflow-y:auto;width:345px;height:655px;margin:81px 0 0 65px;font-size:0;}
-#mobileBox>section img {width:100%;max-width:100%;}
-
-sub
+#mobileBox {position:relative;left:50%;top:50%;overflow:hidden;width:475px;height:838px;margin-top:-419.5px;margin-left:-287.5px;top:50%;left:50%;background:url(../img/bg_phone.png) no-repeat left top;}
+#mobileBox>.section {position:relative;overflow-x:hidden;overflow-y:auto;width:345px;height:655px;margin:81px 0 0 65px;font-size:0;}
+#mobileBox>.section img {width:100%;max-width:100%;}

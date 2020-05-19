@@ -24,10 +24,10 @@ figure {margin:0;padding:0}
 body.typePride {overflow:hidden;}
 
 .wrap {position:relative;overflow-x:hidden;width:100%;margin:0 auto;text-align: center;font-size: 0;}
-header {font-size:0;background:url(../img/ipsi_b/sub/gnbbg.png) repeat-x;}
-header  img {position: relative;}
-header .headerInner {position:relative;max-width:1920px;margin: 0 auto;}
+.header {font-size:0;background:url(../img/ipsi_b/sub/gnbbg.png) repeat-x;}
+.header  img {position: relative;}
+.header .headerInner {position:relative;max-width:1920px;margin: 0 auto;}
 .subVisual {position:relative;margin-top:-90px;z-index:-1;font-size: 0;}
 #container {padding-top:53px;}
 div {font-size: 0;}
-footer{margin-top:110px;font-size: 0;background:url(../img/ipsi_b/sub/footerbg.png) repeat-x;}
+.footer{margin-top:110px;font-size: 0;background:url(../img/ipsi_b/sub/footerbg.png) repeat-x;}
