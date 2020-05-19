@@ -67,4 +67,4 @@ div {font-size:0;}
 .notice ul .slick-dots li.slick-active {font-size:0;display:inline-block;vertical-align: top;width:12px;height:12px;border-radius: 50%;background:#fff}
 .notice ul.intro .slick-dots li.slick-active {background: #2ca343;border:none;}
 
-footer {font-size:0;background:url(../img/temp_a/footerbg.png) repeat-x;text-align: center;}
+.footer {font-size:0;background:url(../img/temp_a/footerbg.png) repeat-x;text-align: center;}
