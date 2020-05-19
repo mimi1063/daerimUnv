@@ -1,7 +1,8 @@
 
 <!DOCTYPE html>
 <html lang="ko">
-<head>
+    <head>
+<!--[if IE 8]>    <html lang="kor" class="ie8"> <![endif]-->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -411,34 +412,6 @@ $(document).ready(function() {
         }
     });
 
-    $('.util').click(function(){
-        $('.dim').css('display','block');
-        $('.dim').css('opacity','0.5');
-        $('.dim').css('z-index','150');
-        $('.popZone').animate({
-            "bottom": "0px"
-        }, 400, 'easeOutQuad')
-    });
-
-    $('.popZone button.close').click(function(){
-        $('.dim').css('display','none');
-        $('.dim').css('opacity','0');
-        $('.dim').css('z-index','0');
-        $('.popZone').animate({
-            "bottom": "-300px"
-        }, 400, 'easeOutQuad')
-    });
-
-    $('.popZone ul').slick({
-        dots:true,
-        arrows: false,
-        variableWidth: true,
-        slidesToShow: 1,
-        adaptiveHeight: true,
-        arrows:false,
-        autoplay: true
-    })
-
     if ($.browser.msie && $.browser.version == '8') {
         console.log('ie8')
     }
@@ -447,22 +420,6 @@ $(document).ready(function() {
 
 </head>
 <body>
-<div class="dim"></div>
-<div class="popZone">
-    <div class="popinner">
-        <img src="img/kor_b/popimg.png">
-        <ul>
-            <li>
-                <img src="img/kor_b/pop_slick.png" alt="">
-            </li>
-            <li>
-                <img src="img/kor_b/pop_slick.png" alt="">
-            </li>
-        </ul>
-    </div>
-    <button class="close"></button>
-    
-</div>
 <!-- header -->
 <div id="header">
     <div class="header">
@@ -660,8 +617,77 @@ $(document).ready(function() {
                     </li>
                 </ul>
             </div>
+            <div class="unit ct1">
+                <div class="mTit">
+                    <span class="mTit_s"><img src="img/kor_b/mTomorrow_tit_s01.png" alt=""></span>
+                    <span class="mTit_b"><img src="img/kor_b/mTomorrow_tit01.png" alt=""></span>
+                </div>
+                <div class="mTxt">
+                    <img src="img/kor_b/mTomorrow_txt01.png" alt="">
+                </div>
+                <ul class="ct">
+                    <li style="background:url(img/kor_b/mTomorrow01_img01.png) no-repeat left top">
+                        <strong><span class="counter">1362</span>명</strong>
+                        <span class="txt"><img src="img/kor_b/mTomorrow01_txt01.png" alt=""></span>
+                    </li>
+                    <li style="background:url(img/kor_b/mTomorrow01_img02.png) no-repeat left top">
+                        <strong><span class="counter">89.6</span>%</strong>
+                        <span class="txt"><img src="img/kor_b/mTomorrow01_txt02.png" alt=""></span>
+                    </li>
+                    <li style="background:url(img/kor_b/mTomorrow01_img03.png) no-repeat left top">
+                        <strong><span class="counter">80</span>대학</strong>
+                        <span class="txt"><img src="img/kor_b/mTomorrow01_txt03.png" alt=""></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="unit ct1">
+                <div class="mTit">
+                    <span class="mTit_s"><img src="img/kor_b/mTomorrow_tit_s01.png" alt=""></span>
+                    <span class="mTit_b"><img src="img/kor_b/mTomorrow_tit01.png" alt=""></span>
+                </div>
+                <div class="mTxt">
+                    <img src="img/kor_b/mTomorrow_txt01.png" alt="">
+                </div>
+                <ul class="ct">
+                    <li style="background:url(img/kor_b/mTomorrow01_img01.png) no-repeat left top">
+                        <strong><span class="counter">1362</span>명</strong>
+                        <span class="txt"><img src="img/kor_b/mTomorrow01_txt01.png" alt=""></span>
+                    </li>
+                    <li style="background:url(img/kor_b/mTomorrow01_img02.png) no-repeat left top">
+                        <strong><span class="counter">89.6</span>%</strong>
+                        <span class="txt"><img src="img/kor_b/mTomorrow01_txt02.png" alt=""></span>
+                    </li>
+                    <li style="background:url(img/kor_b/mTomorrow01_img03.png) no-repeat left top">
+                        <strong><span class="counter">80</span>대학</strong>
+                        <span class="txt"><img src="img/kor_b/mTomorrow01_txt03.png" alt=""></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="unit ct1">
+                <div class="mTit">
+                    <span class="mTit_s"><img src="img/kor_b/mTomorrow_tit_s01.png" alt=""></span>
+                    <span class="mTit_b"><img src="img/kor_b/mTomorrow_tit01.png" alt=""></span>
+                </div>
+                <div class="mTxt">
+                    <img src="img/kor_b/mTomorrow_txt01.png" alt="">
+                </div>
+                <ul class="ct">
+                    <li style="background:url(img/kor_b/mTomorrow01_img01.png) no-repeat left top">
+                        <strong><span class="counter">1362</span>명</strong>
+                        <span class="txt"><img src="img/kor_b/mTomorrow01_txt01.png" alt=""></span>
+                    </li>
+                    <li style="background:url(img/kor_b/mTomorrow01_img02.png) no-repeat left top">
+                        <strong><span class="counter">89.6</span>%</strong>
+                        <span class="txt"><img src="img/kor_b/mTomorrow01_txt02.png" alt=""></span>
+                    </li>
+                    <li style="background:url(img/kor_b/mTomorrow01_img03.png) no-repeat left top">
+                        <strong><span class="counter">80</span>대학</strong>
+                        <span class="txt"><img src="img/kor_b/mTomorrow01_txt03.png" alt=""></span>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <p class="numPaging"><b>1</b>/3</p>
+        <p class="numPaging"><b>1</b>/6</p>
     </div>
 
     <div id="mBetter" class="mBetter">
@@ -839,56 +865,62 @@ $(document).ready(function() {
         <div class="mTit">
             <img src="img/kor_b/mWith_tit.png" alt="">
         </div>
-        <div class="left">
-            <a href="#none">
-                <div class="img thumbHover">
-                    <img src="img/kor_b/mWith_left.png" alt="">
-                </div>
-                <div class="hover">
-                    <!-- <img src="img/kor_b/mWith_left_hover.png" alt=""> -->
-                </div>
-            </a>
-        </div>
-        <div class="right">
-            <div class="unit thumbHover" >
+        <div class="mWidth">
+            <div class="left">
                 <a href="#none">
-                    <span class="img01 thumb"><img src="img/kor_b/mWith_img01_01.png" alt=""></span>
-                </a>
-                <a href="#none">
-                    <span class="img02 thumb"><img src="img/kor_b/mWith_img01_02.png" alt=""></span>
-                </a>
-                <a href="#none">
-                    <span class="img03 thumb"><img src="img/kor_b/mWith_img01_03.png" alt=""></span>
-                </a>
-                <a href="#none">
-                    <span class="img04 thumb"><img src="img/kor_b/mWith_img01_04.png" alt=""></span>
-                </a>
-                <a href="#none">
-                    <span class="img05 thumb"><img src="img/kor_b/mWith_img01_05.png" alt=""></span>
-                </a>
-                <a href="#none">
-                    <span class="img06 thumb"><img src="img/kor_b/mWith_img01_06.png" alt=""></span>
+                    <div class="img thumbHover">
+                        <img src="img/kor_b/mWith_left.png" alt="">
+                    </div>
+                    <div class="hover">
+                        <!-- <img src="img/kor_b/mWith_left_hover.png" alt=""> -->
+                    </div>
                 </a>
             </div>
-            <div class="unit thumbHover">
-                <a href="#none">
-                    <span class="img01 thumb"><img src="img/kor_b/mWith_img01_01.png" alt=""></span>
-                </a>
-                <a href="#none">
-                    <span class="img02 thumb"><img src="img/kor_b/mWith_img01_02.png" alt=""></span>
-                </a>
-                <a href="#none">
-                    <span class="img03 thumb"><img src="img/kor_b/mWith_img01_03.png" alt=""></span>
-                </a>
-                <a href="#none">
-                    <span class="img04 thumb"><img src="img/kor_b/mWith_img01_04.png" alt=""></span>
-                </a>
-                <a href="#none">
-                    <span class="img05 thumb"><img src="img/kor_b/mWith_img01_05.png" alt=""></span>
-                </a>
-                <a href="#none">
-                    <span class="img06 thumb"><img src="img/kor_b/mWith_img01_06.png" alt=""></span>
-                </a>
+            <div class="right">
+                <div class="unit thumbHover" >
+                    <a href="#none">
+                        <span class="img01 thumb"><img src="img/kor_b/mWith_img01_01.png" alt=""></span>
+                    </a>
+                    <a href="#none">
+                        <span class="img02 thumb"><img src="img/kor_b/mWith_img01_02.png" alt=""></span>
+                    </a>
+                    <a href="#none">
+                        <span class="img03 thumb"><img src="img/kor_b/mWith_img01_03.png" alt=""></span>
+                    </a>
+                    <a href="#none">
+                        <span class="img04 thumb"><img src="img/kor_b/mWith_img01_04.png" alt=""></span>
+                    </a>
+                    <a href="#none">
+                        <span class="img05 thumb"><img src="img/kor_b/mWith_img01_05.png" alt=""></span>
+                    </a>
+                    <a href="#none">
+                        <span class="img06 thumb"><img src="img/kor_b/mWith_img01_06.png" alt=""></span>
+                    </a>
+                </div>
+                <div class="unit thumbHover">
+                    <a href="#none">
+                        <span class="img01 thumb"><img src="img/kor_b/mWith_img01_01.png" alt=""></span>
+                    </a>
+                    <a href="#none">
+                        <span class="img02 thumb"><img src="img/kor_b/mWith_img01_02.png" alt=""></span>
+                    </a>
+                    <a href="#none">
+                        <span class="img03 thumb"><img src="img/kor_b/mWith_img01_03.png" alt=""></span>
+                    </a>
+                    <a href="#none">
+                        <span class="img04 thumb"><img src="img/kor_b/mWith_img01_04.png" alt=""></span>
+                    </a>
+                    <a href="#none">
+                        <span class="img05 thumb"><img src="img/kor_b/mWith_img01_05.png" alt=""></span>
+                    </a>
+                    <a href="#none">
+                        <span class="img06 thumb"><img src="img/kor_b/mWith_img01_06.png" alt=""></span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="ie">
+                <img src="img/kor_b/mWidth_ie.png" alt="">
             </div>
         </div>
     </div>

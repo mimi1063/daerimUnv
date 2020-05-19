@@ -1,5 +1,7 @@
 @charset "utf-8";
 @import url(font_noto/font.css);
+@import url(ApercuPro-Bold/style.css);
+@import url(ApercuPro/style.css);
 
 /* Reset */
 html, body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, span, form, fieldset, input, select, label, textarea, table, caption, thead, tfoot, tbody, tr, th, td
@@ -60,9 +62,9 @@ div {font-size:0;}
 #header .header .gnb {opacity:0;transform:translate3d(0, 100%, 0);transition:0.5s 0.4s;}
 #header .header .util {opacity:0;transform:translate3d(0, 100%, 0);transition:0.5s 0.4s;}
 
-#header.on header h1 {opacity:1;transform: translate3d(0, 0, 0);}
-#header.on header .gnb {opacity:1;transform:translate3d(0, 0, 0);}
-#header.on header .util {opacity:1;transform:translate3d(0, 0, 0);}
+#header.on .header h1 {opacity:1;transform: translate3d(0, 0, 0);}
+#header.on .header .gnb {opacity:1;transform:translate3d(0, 0, 0);}
+#header.on .header .util {opacity:1;transform:translate3d(0, 0, 0);}
 .util > img {position: relative;z-index:160}
 /* gnb */
 .gnb {position:absolute;right:110px;top:45px;text-align:left;z-index:200;}
@@ -110,7 +112,7 @@ div {font-size:0;}
 .mNotice .list .unit span.img {margin-bottom:30px;}
 .mNotice .list .slick-arrow {position:absolute;left:-450px;top:190px;display:inline-block;width:50px;height:50px;font-size:0;z-index:1;}
 .mNotice .list .slick-arrow.slick-prev {background:url(../img/kor_b/mNotice_btn_prev.png) no-repeat center;}
-.mNotice .list .slick-arrow.slick-next {left:-402px;background:url(../img/kor_b/mNotice_btn_next.png) no-repeat center;}
+.mNotice .list .slick-arrow.slick-next {margin-left:4px;left:-402px;background:url(../img/kor_b/mNotice_btn_next.png) no-repeat center;}
 
 /* mNotice on */
 .mNotice h2 {opacity:0;transform:translate3d(0, 100%, 0);transition:0.6s;}
@@ -141,7 +143,7 @@ div {font-size:0;}
 .mTomorrow .list .unit .ct li strong span {display:inline-block;font-size:72px;font-weight:bold;}
 .mTomorrow .list .unit .ct li .txt img {margin-top:30px;display:block;font-size:0;}
 .mTomorrow .numPaging {position:absolute;left:192px;bottom:80px;text-align:center;font-size:28px;letter-spacing: 3px;}
-.mTomorrow .numPaging b {font-size:50px;font-weight:normal;font-family: 'Roboto';margin-left:-3px;}
+.mTomorrow .numPaging b {font-size:50px;font-weight:normal;font-family: 'ApercuPro';margin-left:-3px;font-weight:600}
 
 .mTomorrow .list .unit.ct1 .ct li {display:inline-block;padding-top:120px;margin-right:110px;}
 .mTomorrow .list .unit.ct1 .ct li:last-child {margin-right:0;}
@@ -298,8 +300,8 @@ div {font-size:0;}
 .mWith.on .left .img {opacity:1;}
 
 /* footer */
-#footer {position:relative;width:100%;height:233px;background:#444348;box-sizing:border-box;}
-#footer .footer_top {position:relative;background:#333333;}
+#footer {position:relative;width:100%;height:233px;background:#15141a;box-sizing:border-box;}
+#footer .footer_top {position:relative;background:#000000;}
 #footer .footer_top a.btn_top {position:absolute;right:0;top:0;width:55px;height:55px;}
 #footer .footer_bottom {padding-top:22px;}
 #footer .quick {position:absolute;left:0;bottom:178px;background:#000;overflow:hidden;width:100%;height:0;z-index:100;}
@@ -315,3 +317,9 @@ div {font-size:0;}
 .thumbHover .thumb:after {content:'';position:absolute;left:0;top:0;width:100%;height:100%;display:block;background:rgba(31,31,31,0.4);opacity:0;z-index:200;transition:.3s;}
 .thumbHover a:hover .thumb:after {opacity:1;}
 .thumbHover a:hover .thumb img {transform:scale(1.05);}
+
+/* ie */
+.mWidth .left, .ie8  .mWidth .right {display:block;}
+.mWidth .ie {display:none;}
+.ie8  .mWidth .left, .ie8  .mWidth .right {display:none;}
+.ie8  .mWidth .ie {display:block;}

@@ -25,10 +25,10 @@ figure {margin:0;padding:0}
 #header {z-index:10;background:#edf0f4;font-size:0;}
 #header .topUtil {padding: 15px 225px;font-size:0;border-bottom: 1px solid #d8dee4}
 #header .topUtil img.utllR {float:right;padding-right: 100px;}
-#header header {position:relative;width:100%;margin:0 auto;text-align:center;}
-#header header h1 {position:absolute;left:225px;top:25px;}
-#header header .gnb {overflow:hidden;margin-left:270px;padding-top:30px;padding-bottom: 30px;}
-#header header .util {position:absolute;right:235px;top:35px;overflow:hidden;}
+#header .header {position:relative;width:100%;margin:0 auto;text-align:center;}
+#header .header h1 {position:absolute;left:225px;top:25px;}
+#header .header .gnb {overflow:hidden;margin-left:330px;padding-top:30px;padding-bottom: 30px;}
+#header .header .util {position:absolute;right:235px;top:35px;overflow:hidden;}
 .mView {background:#edf0f4;padding-bottom:145px;}
 .mView ul {font-size:0;padding-left:225px;}
 .mView ul li{display:inline-block;font-size:0;background:#edf0f4;}
@@ -82,4 +82,4 @@ figure {margin:0;padding:0}
 }
 .mBook ul li + li {margin-left:50px;}
 
-footer {background:url(../img/ipsi_b/bg_footer.png)  repeat-x;text-align: center;font-size:0}
+.footer {background:url(../img/ipsi_b/bg_footer.png)  repeat-x;text-align: center;font-size:0}
