@@ -33,7 +33,8 @@ figure {margin:0;padding:0}
 .mView ul {font-size:0;padding-left:225px;}
 .mView ul li{display:inline-block;font-size:0;background:#edf0f4;}
 .mView ul li:hover {box-shadow: 0px 14px 8px -5px rgba(0, 0, 0, 0.2);transition:0.3s all}
-.mView ul li:first-child{box-shadow: 0px 14px 8px -5px rgba(0, 0, 0, 0.2);}
+.mView ul li.first{box-shadow: 0px 14px 8px -5px rgba(0, 0, 0, 0.2);}
+.mView ul li.second{box-shadow: 0px 14px 8px -5px rgba(0, 0, 0, 0.2);}
 .mView ul li + li {margin-left:20px;}
 .mVisual {position:relative;height:370px;margin-top:-100px;margin-bottom:50px;padding-left:225px;}
 .mVisual .txt  {position:relative;padding-top:70px;padding-bottom:60px;font-size: 0;z-index:5;top:30px;opacity: 0;}

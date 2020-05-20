@@ -24,12 +24,12 @@ figure {margin:0;padding:0}
 body.typePride {overflow:hidden;}
 
 .wrap {position:relative;overflow-x:hidden;width:100%;margin:0 auto;text-align: center;font-size: 0;}
-header {height:90px;border-top:2px solid #00665f;font-size:0;background:#fff;}
-header .headerInner {position:relative;max-width:1920px;margin: 0 auto;}
-header img {position: relative; top:20px;}
+.header {height:90px;border-top:2px solid #00a6db;font-size:0;background:#fff;box-sizing:border-box;}
+.header .headerInner {position:relative;max-width:1920px;margin: 0 auto;}
+.header img {position: relative; top:22px;}
 .subVisual {position:relative;margin-top:-90px;z-index:-1;font-size: 0;}
 #container {padding-top:60px;}
 div {font-size: 0;}
-footer{padding: 35px 0 50px 0;margin-top:165px;font-size: 0;border-top:1px solid #e1e4e7}
-.nav {position:relative;width:1455px;height:66px;background:#199492;margin: -35px auto 0 auto;font-size:0}
+.footer{padding: 35px 0 50px 0;margin-top:165px;font-size: 0;border-top:1px solid #e1e4e7}
+.nav {position:relative;width:1455px;height:66px;background:#00a6db;margin: -35px auto 0 auto;font-size:0}
 .nav.on {position:fixed;top:0;width:100%;margin: 0 auto;}

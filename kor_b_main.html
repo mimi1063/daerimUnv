@@ -127,9 +127,17 @@
                     "opacity": "1",
                     "left": "0"
                 }, 700, "linear");
+
+                if($('.mVisual .unit2').hasClass('slick-active')){
+                    $('#header .bg').css('background','#f4951f')
+                }else{
+                    $('#header .bg').css('background','')
+                }
+                
             }
             $('.mVisual').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
                 visualMotion_clear();
+                
             });
             $('.mVisual').on('afterChange', function (event, slick, currentSlide) {
                 visualMotion2();
@@ -506,7 +514,7 @@
     <div id="container">
         <!-- visual -->
         <div class="mVisual">
-            <div class="unit">
+            <div class="unit unit1">
                 <div class="img">
                     <img src="img/kor_b/mVisual01.png" alt="">
                 </div>
@@ -518,15 +526,15 @@
                     </div>
                 </div>
             </div>
-            <div class="unit">
+            <div class="unit unit2">
                 <div class="img">
                     <img src="img/kor_b/mVisual02.png" alt="">
                 </div>
                 <div class="txtGrp">
                     <div class="inner">
-                        <div class="tit_s"><img src="img/kor_b/mVisual_tit_s.png" alt="" /></div>
-                        <div class="tit"><img src="img/kor_b/mVisual01_tit.png" alt="" /></div>
-                        <div class="txt"><img src="img/kor_b/mVisual01_txt.png" alt="" /></div>
+                        <div class="tit_s"><img src="img/kor_b/mVisual_tit_s2.png" alt="" /></div>
+                        <div class="tit"><img src="img/kor_b/mVisual02_tit.png" alt="" /></div>
+                        <div class="txt"><img src="img/kor_b/mVisual02_txt.png" alt="" /></div>
                     </div>
                 </div>
             </div>

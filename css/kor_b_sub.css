@@ -25,11 +25,14 @@ body.typePride {overflow:hidden;}
 body.typePride .sduWrap {overflow-x:hidden;overflow-y:auto;height:2070px;}
 
 .wrap {position:relative;overflow-x:hidden;width:100%;margin:0 auto;text-align: center;font-size: 0;}
-header {font-size:0}
-header .headerInner {position:relative;max-width:1920px;margin: 0 auto;}
+.header {font-size:0}
+.header .headerInner {position:relative;max-width:1920px;margin: 0 auto;}
 div {font-size: 0;}
-footer{font-size: 0;}
-.nav {position:relative;width:100%;height:60px;background:#2eb789}
-.nav.on {position:fixed;top:0}
+.footer{font-size: 0;}
+.nav {position:relative;width:100%;height:60px;background:#07a2d6}
+.nav.on {position:fixed;top:0;z-index:99}
 
-footer {font-size:0;background:url(../img/kor_b/footer_bg.png) repeat-x;}
+.footer {
+    font-size: 0;
+    background: url(../img/kor_b/footer_bg2.png) repeat-x;
+}

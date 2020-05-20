@@ -34,10 +34,10 @@ div {font-size:0;}
 
 /* header */
 #header {overflow:hidden;position:absolute;left:0;top:0;height:125px;box-sizing:border-box;z-index:1;}
-#header h1 {float:left;width:125px;height:125px;font-size:0;}
-#header h1 a {display:block;}
+#header h1 {float:left;width:320px;height:125px;font-size:0;}
+#header h1 a {display:block;margin-top:32px;}
 #header .top_util {float:left;margin:75px 0 0 25px;}
-#header .gnb {position:relative;display:block;overflow:hidden;width:650px;float:left;padding:50px 50px 0 0;margin-left:440px}
+#header .gnb {position:relative;display:block;overflow:hidden;width:820px;float:left;padding:50px 50px 0 0;margin-left:200px}
 #header .gnb>li {float:left;width:auto;margin-right:70px;text-align:center;}
 #header .gnb>li:last-child {margin-right:0;}
 #header .btn_menu {position:absolute;right:0;top:50px;}
