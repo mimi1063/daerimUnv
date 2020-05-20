@@ -25,8 +25,8 @@ figure {margin:0;padding:0}
 #header {position:fixed;width:100%;height:90px;z-index:10;background:#fff;}
 #header .header {position:relative;width:100%;margin:0 auto;text-align:center;min-width:1700px}
 #header .header h1 {position:absolute;left:232px;top:24px;}
-#header .header .gnb {overflow:hidden;padding-left:0px;padding-top:31px;border-top:2px solid #00a6db}
-#header .header .util {position:absolute;right:232px;top:34px;overflow:hidden;}
+#header .header .gnb {overflow:hidden;padding-left:2px;padding-top:33px;border-top:2px solid #00a6db}
+#header .header .util {position:absolute;right:231px;top:36px;overflow:hidden;}
 .mVisual {padding-top:95px;text-align: center;background:#edf1f4}
 .mVisual .mainSl > span {position:absolute;display:block;width:100%;height:476px;background:#138add;left:0}
 .mVisual .pattern {position:absolute;width:47px;height:47px;border-radius:50%;left:120px;top:70px;opacity:0;animation:pattern 0.8s ease-out 0.7s forwards;background:#c585ff}
