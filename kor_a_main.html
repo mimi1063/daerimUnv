@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="utf-8">
+<!--[if IE 8]>    <html lang="kor" class="ie8"> <![endif]-->
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>동남보건대학교</title>
-<script type="text/javascript" src="js/jquery-2.2.1.min.js"></script>
+<title>대림대학교</title>
+<script src="http://code.jquery.com/jquery-1.9.0.js"></script>
 <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 
-<script type="text/javascript" src="js/slick/slick.min.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
 <link rel="stylesheet" type="text/css" href="js/slick/slick.css" />
 
 <script type="text/javascript" src="js/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
@@ -352,7 +353,7 @@ $(function(){
 
 <div class="sduWrap">
     <div id="header">
-        <header>
+        <div class="header">
             <h1>
                 <a href="kor_a_sub.html">
                     <img src="img/kor_a/logo.png" />
@@ -370,7 +371,7 @@ $(function(){
             <div class="util">
                 <img src="img/kor_a/top_util.png" class="top_util" />
             </div>
-        </header>
+        </div>
 
         <button type="button" class="btn_stickyPride"><img src="img/kor_a/sticky/btn_prideSdu.png" /></button>
         <div class="mPride" style="right:-1635px;">
@@ -379,56 +380,6 @@ $(function(){
                     <div class="left">
                         <img src="img/kor_a/left_cont.png" alt="">
                     </div>
-                    <!-- <ul class="list">
-                        <li>
-                            <div>
-                                <img class="img" src="img/kor_a/mPride01_img.png" />
-                                <img class="txt" src="img/kor_a/mPride01_txt.png" />
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <img class="img" src="img/kor_a/mPride02_img.png" />
-                                <img class="txt" src="img/kor_a/mPride02_txt.png" />
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <img class="img" src="img/kor_a/mPride03_img.png" />
-                                <img class="txt" src="img/kor_a/mPride03_txt.png" />
-                            </div>
-                        </li>
-                        <li>
-                            <div class="mTit">
-                                <h2><img src="img/kor_a/mTit_pride.png" /></h2>
-                                <img src="img/kor_a/mPride_txt.png" />
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <img class="img" src="img/kor_a/mPride04_img.png" />
-                                <img class="txt" src="img/kor_a/mPride04_txt.png" />
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <img class="img" src="img/kor_a/mPride05_img.png" />
-                                <img class="txt" src="img/kor_a/mPride05_txt.png" />
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <img class="img" src="img/kor_a/mPride06_img.png" />
-                                <img class="txt" src="img/kor_a/mPride06_txt.png" />
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <img class="img" src="img/kor_a/mPride07_img.png" />
-                                <img class="txt" src="img/kor_a/mPride07_txt.png" />
-                            </div>
-                        </li>
-                    </ul> -->
                     <div class="right">
                         <img src="img/kor_a/rightCont.png" alt="">
                     </div>
@@ -436,7 +387,6 @@ $(function(){
                 <span class="mouse"></span>
             </div>
         </div>
-
     </div>
 
     <div id="container">
@@ -569,8 +519,8 @@ $(function(){
             <!-- mDeptIntro -->
             <div class="mDeptIntro">
                 <ul>
-                    <li><p><span><img src="img/kor_a/mDeptIntro01_txt.png" /></span></p></li>
-                    <li><p><span><img src="img/kor_a/mDeptIntro02_txt.png" /></p></span></li>
+                    <li class="first"><p><span><img src="img/kor_a/mDeptIntro01_txt.png" /></span></p></li>
+                    <li class="second"><p><span><img src="img/kor_a/mDeptIntro02_txt.png" /></span></p></li>
                 </ul>
             </div>
             <!-- //mDeptIntro -->
@@ -634,10 +584,10 @@ $(function(){
             <div class="mNetwork">
                 <h2><img src="img/kor_a/mTit_network.png" /></h2>
                 <ul class="list">
-                    <li class="counter">1,636</li>
-                    <li class="counter">4,148</li>
-                    <li class="counter">100</li>
-                    <li class="counter">75.6</li>
+                    <li class="counter counter1">1,636</li>
+                    <li class="counter counter2">4,148</li>
+                    <li class="counter counter3">100</li>
+                    <li class="counter counter4">75.6</li>
                 </ul>
             </div>
             <!-- //mNetwork -->
