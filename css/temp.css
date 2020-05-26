@@ -35,7 +35,7 @@ div {font-size:0;}
 /* tempC */
 .dnhuTempC {min-width:1660px;overflow-x: auto;}
 .dnhuTempC #header {position: relative;height:90px;background:#e9f0f8;border-bottom:1px solid #d1d8df;}
-.dnhuTempC #header h1 {position:absolute;left:33px;top:25px;}
+.dnhuTempC #header h1 {position:absolute;left:60px;top:25px;}
 .dnhuTempC #header .gnb {position:relative;text-align: center;padding-top:35px;}
 .dnhuTempC #header .gnb .util {position:absolute;right:90px}
 .dnhuTempC .navigation {font-size:0;padding:30px 0; background:#e9f0f8;text-align: center;}

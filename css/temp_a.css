@@ -55,7 +55,7 @@ div {font-size:0;}
 .mVisual .txt {position:relative;padding-left:360px;padding-top:150px;}
 .mVisual .btn {position:absolute;right:360px;top:95px;}
 
-.navi {text-align: center; padding: 45px 0 50px 0;background:#f0f3fa}
+.navi {text-align: center; padding: 45px 0 45px 0;background:#f0f3fa}
 
 .notice {padding:85px 0 120px 0;overflow: hidden;text-align: center;}
 .noticeWrap{display:inline-block;overflow:hidden;}
