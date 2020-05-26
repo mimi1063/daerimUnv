@@ -24,7 +24,7 @@ figure {margin:0;padding:0}
 body.typePride {overflow:hidden;}
 body.typePride .sduWrap {overflow-x:hidden;overflow-y:auto;height:2070px;}
 
-.sduWrap {position:relative;overflow-x:hidden;width:100%;max-width:1920px;margin:0 auto;}
+.sduWrap {position:relative;overflow-x:auto;min-width:1900px;margin:0 auto;}
 #header {position:absolute;width:100%;z-index:10;}
 #header.gnbOn {border:1px solid #dfdfe1;background:#fff;}
 #header .header {position:relative;width:100%;margin:0 auto;height:69px;text-align:center;transition:0.2s;}
@@ -67,7 +67,7 @@ body.typePride .sduWrap {overflow-x:hidden;overflow-y:auto;height:2070px;}
 #header .btn_stickyPride {display:block;position:fixed;right:-160px;top:69px;width:156px;height:150px;transition:0.2s;z-index:31;}
 #header .btn_stickyPride>img {vertical-align:top;}
 
-.typeSticky #header .header {position:fixed;background:#fff;z-index:9999;border-bottom:1px solid #e0dfe0}
+.typeSticky #header .header {position:fixed;background:#fff;z-index:9999;border-bottom:1px solid #e0dfe0;min-width:1900px;}
 .typeSticky #header .header h1>a>img,
 .typeSticky #header .header .gnb>img {display:none;}
 .typeSticky #header .header .sticky_unit {display:block;}
